@@ -1,0 +1,64 @@
+name: FirstPlugin
+version: 1.0.0
+main: plugin.Main
+api-version: '1.18'
+depend: [ProtocolLib]
+
+commands:
+  vzone:
+    description: Define and manage villager zones
+    usage: /vzone <num> <x1> <y1> <z1> <x2> <y2> <z2> | /vzone remove <num> | /vzone display
+    permission: firstplugin.vzone
+
+  vgolemrate:
+    description: Set the village iron golem spawn multiplier
+    usage: /vgolemrate <multiplier>
+    permission: firstplugin.vgolemrate
+
+  rainlevel:
+    description: Set the visual rain level
+    usage: "/rainlevel <0-1|reset>"
+    permission: firstplugin.rainlevel
+
+  weather:
+    description: Control the custom weather system
+    usage: "/weather <cloudless|clear|overcast|drizzle|rain|thunder>"
+    permission: firstplugin.weather
+
+  season:
+    description: Enable or disable seasonal leaf behavior
+    usage: /season <enable|disable>
+    permission: firstplugin.season
+
+  trident:
+    description: Temporarily summon rain
+    permission: firstplugin.trident
+
+  raid:
+    description: Set the daily natural raid probability
+    permission: firstplugin.raid
+permissions:
+  firstplugin.vzone:
+    description: Allows managing villager zones
+    default: op
+
+  firstplugin.vgolemrate:
+    description: Allows setting the village iron golem spawn multiplier
+    default: op
+
+  firstplugin.rainlevel:
+    description: Allows changing the visual rain level
+    default: op
+
+  firstplugin.weather:
+    description: Allows changing the custom weather
+    default: op
+
+  firstplugin.season:
+    default: op
+
+  firstplugin.trident:
+    default: op
+
+  firstplugin.raid:
+    default: op
